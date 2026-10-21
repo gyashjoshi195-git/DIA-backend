@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 
 async def get_llm_response(system_message, user_text):
     response = await groq_client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
+        model="openai/gpt-oss-120b",
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": user_text}
